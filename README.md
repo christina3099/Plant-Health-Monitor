@@ -1,9 +1,70 @@
-# Plant-Health-Monitor
-Summary - In this project I have collected urban garden plants data and trained the model to detect the condition of the plant provide apt plant care suggestions
+# 🌱 Plant Health Diagnosis & AI Care Recommendation System
 
-The Story -
-One evening as I was watering my plants, I  noticed that the hydrangea plant which I had brought just a week ago was looking dull and about to wilt. Which saddened me,
-as I loved the flowers and had lovingly bought the plant for a price. And as I was thinking how Good it would be if I had an app which could tell me what's the issue with the plant using its image and I could
-take care of the plant accordingly. And thus was the birth of the idea behind this app and began the frantic search for data collection. And the journey of training the model and making it into realtime application. 
+## Deep Learning + LLM-Powered Plant Care Assistant
 
-Currently the model is undergoing training and I shall keep uploading the progress. Stay tuned! :)
+This project is an end-to-end AI system that diagnoses plant leaf conditions from images and generates personalized care recommendations using a Large Language Model (LLM).It is designed as a small-scale version of real-world agriculture-health AI systems.
+
+##  Features
+### 1. Plant Disease Classification (CNN Model)
+
+Classifies plant leaf images into:
+- Healthy
+- Rusty
+- Powdery
+
+Built using TensorFlow/Keras
+Uses augmentation & normalization for improved generalization
+Trained on Kaggle dataset
+
+###  2. FastAPI Inference Backend
+
+Accepts image uploads (/predict)
+Runs preprocessing + model inference
+Returns:
+- Predicted class
+- Confidence score
+
+### 3. LLM-based Plant Care Suggestions (In Progress)
+
+Integrates GPT to generate:
+- Treatment steps
+- Watering schedule
+- Preventive measures
+- Nutrient recommendations
+
+### 4. Frontend Web App (In Progress)
+
+Built with Streamlit
+Allows drag-and-drop image upload
+Shows model prediction + AI-generated recommendations
+
+## Tech Stack
+
+| Layer          | Technology                                   |
+| -------------- | -------------------------------------------- |
+| Model Training | Python, TensorFlow, Keras, NumPy, Matplotlib |
+| Serving        | FastAPI, Uvicorn                             |
+| Deployment     | Docker, Azure/GCP (Upcoming)                 |
+| Frontend       | React.js (In Progress)                       |
+| AI Reasoning   | GPT API (In Progress)                        |
+
+
+## 📂 Project Structure
+
+<img width="578" height="336" alt="image" src="https://github.com/user-attachments/assets/2ab6e66c-002b-43ba-a0ca-a5d505c899f5" />
+
+
+## 🔜 Upcoming Enhancements
+
+ - Add LLM-based care recommendation module
+ - Deploy FastAPI with Docker
+ - Launch frontend UI
+ - Add user authentication
+ - GPU training pipeline
+
+ ## 📘 Dataset
+
+Kaggle Plant Disease Dataset
+(Healthy, Rusty, Powdery classes)
+Dataset not included in repo due to size. 
+
