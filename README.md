@@ -53,6 +53,43 @@ Shows model prediction + AI-generated recommendations
 
 <img width="578" height="336" alt="image" src="https://github.com/user-attachments/assets/2ab6e66c-002b-43ba-a0ca-a5d505c899f5" />
 
+## 📦 Installation
+### 1. Clone the repository
+
+git clone https://github.com/<your-username>/plant-health-ai.git
+cd plant-health-ai
+
+### 2. Create and activate a virtual environment
+
+python3 -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+### 4. Running the FastAPI Server
+
+Start the API:
+uvicorn api.main:app --reload
+
+Access the API Docs:
+http://127.0.0.1:8000/docs
+
+### Example Prediction (API)
+
+Send a POST request:
+
+curl -X POST "http://127.0.0.1:8000/predict" \
+  -F "file=@leaf.jpg"
+
+Response:
+{
+  "prediction": "Rusty",
+  "confidence": 97%
+}
+
 
 ## 🔜 Upcoming Enhancements
 
@@ -68,3 +105,6 @@ Kaggle Plant Disease Dataset
 (Healthy, Rusty, Powdery classes)
 Dataset not included in repo due to size. 
 
+## 📄 License
+
+MIT License
